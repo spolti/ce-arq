@@ -126,6 +126,11 @@ public class TemplateUtils {
             for (TemplateParameter parameter : parameters) {
                 String name = resolver.resolve(parameter.name());
                 String value = resolver.resolve(parameter.value());
+
+                System.out.println("Value before transformation: " + parameter.value());
+
+                System.out.println("Value after transformation: " + value);
+
                 map.put(name, value);
             }
             return map;
